@@ -84,7 +84,15 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("arquivo", type=Path, help="arquivo JSON com a viga")
     p.add_argument("-g", "--grafico", type=Path, help="salvar diagramas (PNG/SVG/PDF)")
     p.add_argument("--json", action="store_true", help="saída em JSON")
-    p.add_argument("-V", "--version", action="version", version=f"%(prog)s {__version__}")
+    p.add_argument(
+        "-V",
+        "--version",
+        action="version",
+        version=(
+            f"%(prog)s {__version__} — desenvolvido por carlpit "
+            f"(https://github.com/carlpit)"
+        ),
+    )
     args = p.parse_args(argv)
 
     try:

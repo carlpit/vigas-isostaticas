@@ -138,3 +138,7 @@ print(res.flecha_max)       # (0.00548..., 2.886...)  metros, positivo para baix
 ## Licença
 
 MIT
+
+---
+
+**Desenvolvido por [carlpit](https://github.com/carlpit)** · Developed by carlpit
