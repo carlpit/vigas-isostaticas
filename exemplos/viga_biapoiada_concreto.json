@@ -1,0 +1,12 @@
+{
+  "descricao": "Viga de concreto C25, 20x50 cm, vão de 6 m: peso próprio + alvenaria + carga de laje concentrada",
+  "comprimento": 6.0,
+  "apoio": {"tipo": "biapoiada"},
+  "secao": {"b": 0.20, "h": 0.50},
+  "fck_MPa": 25,
+  "cargas": [
+    {"tipo": "distribuida", "q": 2.5, "x1": 0, "x2": 6, "obs": "peso próprio 25 kN/m3 x 0,20 x 0,50"},
+    {"tipo": "distribuida", "q": 7.0, "x1": 0, "x2": 6, "obs": "alvenaria"},
+    {"tipo": "pontual", "P": 30, "x": 2.0, "obs": "apoio de viga secundária"}
+  ]
+}

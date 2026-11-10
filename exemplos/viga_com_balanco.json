@@ -1,0 +1,11 @@
+{
+  "descricao": "Viga com balanços nas duas extremidades e momento aplicado",
+  "comprimento": 8.0,
+  "apoio": {"tipo": "biapoiada", "a": 1.5, "b": 6.5},
+  "cargas": [
+    {"tipo": "distribuida", "q": 12, "x1": 0, "x2": 8},
+    {"tipo": "pontual", "P": 15, "x": 0},
+    {"tipo": "pontual", "P": 15, "x": 8},
+    {"tipo": "momento", "M": 10, "x": 4}
+  ]
+}

@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vigas-isostaticas"
+version = "0.1.0"
+description = "Análise de vigas isostáticas: reações, DEC, DMF e flecha, com verificação l/250 (NBR 6118)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Carlos Vinicius" }]
+keywords = ["engenharia civil", "estruturas", "vigas", "resistência dos materiais", "NBR 6118"]
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+graficos = ["matplotlib>=3.7"]
+dev = ["pytest>=7", "pytest-cov", "ruff", "matplotlib>=3.7"]
+
+[project.scripts]
+vigas = "vigas.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests", "src"]
+addopts = "--doctest-modules --ignore=src/vigas/__main__.py"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["E741"]
