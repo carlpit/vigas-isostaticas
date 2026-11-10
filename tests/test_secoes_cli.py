@@ -54,3 +54,13 @@ def test_arquivo_invalido(tmp_path, capsys):
     ruim = tmp_path / "x.json"
     ruim.write_text("{nao é json")
     assert main([str(ruim)]) == 2
+
+def test_grafico_sem_matplotlib(monkeypatch, tmp_path, capsys):
+    import sys
+
+    monkeypatch.setitem(sys.modules, "vigas.graficos", None)
+    destino = tmp_path / "viga.png"
+    assert main([str(EXEMPLOS / "balanco_aco.json"), "-g", str(destino)]) == 2
+    assert "matplotlib" in capsys.readouterr().err
+    assert not destino.exists()
+

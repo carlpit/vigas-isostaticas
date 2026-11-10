@@ -8,7 +8,8 @@ version = "0.1.0"
 description = "Análise de vigas isostáticas: reações, DEC, DMF e flecha, com verificação l/250 (NBR 6118)."
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "MIT" }
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{ name = "Carlos Vinicius" }]
 keywords = ["engenharia civil", "estruturas", "vigas", "resistência dos materiais", "NBR 6118"]
 dependencies = ["numpy>=1.24"]

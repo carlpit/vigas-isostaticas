@@ -110,8 +110,15 @@ def main(argv: list[str] | None = None) -> int:
         print(relatorio(viga, res))
 
     if args.grafico:
-        from .graficos import plotar
-
+        try:
+            from .graficos import plotar
+        except ImportError:
+            print(
+                "erro: matplotlib não está instalado. "
+                "Instale com: pip install 'vigas-isostaticas[graficos]'",
+                file=sys.stderr,
+            )
+            return 2
         plotar(viga, res, args.grafico, titulo=args.arquivo.stem)
         print(f"\nDiagramas salvos em {args.grafico}", file=sys.stderr)
     return 0

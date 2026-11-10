@@ -60,14 +60,12 @@ Flecha elástica imediata (sem fissuração/fluência):
 ```json
 {
   "comprimento": 6.0,
-  "apoio": {"tipo": "biapoiada", "a": 0, "b": 6},
+  "apoio": {"tipo": "biapoiada"},
   "secao": {"b": 0.20, "h": 0.50},
   "fck_MPa": 25,
   "cargas": [
     {"tipo": "distribuida", "q": 9.5, "x1": 0, "x2": 6},
-    {"tipo": "distribuida", "q1": 0, "q2": 5, "x1": 2, "x2": 6},
-    {"tipo": "pontual", "P": 30, "x": 2.0},
-    {"tipo": "momento", "M": 10, "x": 4}
+    {"tipo": "pontual", "P": 30, "x": 2.0}
   ]
 }
 ```
